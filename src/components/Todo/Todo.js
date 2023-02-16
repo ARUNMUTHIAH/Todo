@@ -2,11 +2,11 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Add from '../Button/Add';
 import Display from '../Display/Display';
-import InputBox from '../TextBox/InputBox';
+import Input from '../TextBox/Input';
 
 const Todo = (context) =>
 	<Box>
-		<InputBox { ...context }/>
+		<Input { ...context }/>
 		<Add { ...context }/>
 		<Display { ...context }/>
 	</Box>;

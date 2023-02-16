@@ -10,8 +10,18 @@ const addId = (context) => {
 	};
 };
 
+const removeTodo = (context) => {
+	const { data: id, state: { todo }} = context;
+
+	return todo.filter((data) => data.id !== id);
+};
+
+const addButtonAction = ({ state: { inputValue }}) => inputValue === '';
+
 const TodoManager = {
 	addId,
+	removeTodo,
+	addButtonAction,
 };
 
 export default TodoManager;

@@ -11,9 +11,11 @@ const Add = (context) => {
 			<Button
 				variant="outlined"
 				size="large"
+				disabled={ TodoManager.addButtonAction(context) }
 				onClick={ () => setState((state) => ({
 					...state,
 					todo: [...todo, TodoManager.addId(context)],
+					inputValue: '',
 				})) }
 			>ADD</Button>
 

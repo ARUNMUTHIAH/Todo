@@ -5,7 +5,7 @@ import Todo from './components/Todo/Todo';
 
 const getInitialState = {
 	todo: [],
-	inputValue: null,
+	inputValue: '',
 };
 
 const App = (context) => {
