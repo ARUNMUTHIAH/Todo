@@ -1,65 +1,43 @@
-# Project Name
+REQUIREMENT :
 
-	Project description.
+* Place the  inputTextBox and Add button.
 
-## Keys
+* Place the remove button in all todo.
 
-* A short list of things to understand the package, better.
+* Place the checkBox in all todo.
 
-## Notes
+* Place clearAll button.
 
-* Though pnpm is the preferred package manager, package-lock is still kept to widen support.
-
-## Usage
-### Setup
-#### Linux / Mac
-```sh
-$ git clone https://github.com/Laufire/react-starter.git project-name
-$ cd project-name
-$ sh ./adopt.sh
-$ sh ./setup.sh
-```
-
-#### Windows
-```sh
-C:\> git clone https://github.com/Laufire/react-starter.git project-name
-C:\> cd project-name
-C:\> .\adopt.bat
-```
-
-### Development
-#### Linux, Windows & Mac
-```
-$ # Run all tests.
-$  pnpm run test-dev
-
-$ # Run a particular test (matching the given pattern).
-$ pnpm run test-dev -- --testPathPattern "target"
-
-$ # Run all tests with coverage.
-$  pnpm run test-ci
-```
-
-## ToDo
-
-* Have branches to allow for multiple templates.
-	* One for a clean one to start new projects.
-	* One with basic examples.
-
-* Audit the packages. It's not done, yet. Due to poor understanding of the dependencies.
-
-* Try moving away from create-react-app, as it introduces a lot of constraints, including reconfiguring jest.
-
-* Think of replacing npm with pnpm.
-
-two object in state (todo,inputValue)
-input component we want to type some text that text will be stored in target.value
-and give that value to inputValue in state
-add btn comp we want to store the data into todo in state spread the todo and merge  the inputValue.
+* When the todolist object is clicked we should edit that selected object that time update button will be appear on the screen.
 
 
-map the todo array and give the value to delete comp.
-delete comp
+
+
+
+STEP TODO :
+
+ * When the text is added in inputTextBox, add Button will be Enabled. otherwise add button in disable state.
+ * When the user click the add button that content will be added to todo list.
+ * We can add multiple todo.
+
+
+ * When the remove button is clicked remove the selected todo.
+
+
+
+ * When the checkBox in selected state it will appear on the completed row.
+ * When the checkBox in unSelected state it will apprea on the active row.
+
+
+
+* When the  clearAll button is clicked clear the selected todo.
+
+
+
+* When the todolist object is clicked that object will apprear on the inputTextBox that time update button will be appear on the screen
+* When the update button will clicked add that text to that todo list.
+
+
 
 
 
