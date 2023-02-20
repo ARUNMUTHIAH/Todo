@@ -11,6 +11,7 @@ const Add = (context) => {
 			<Button
 				variant="outlined"
 				size="large"
+				color="secondary"
 				disabled={ TodoManager.addButtonAction(context) }
 				onClick={ () => setState((state) => ({
 					...state,
