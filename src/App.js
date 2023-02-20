@@ -2,10 +2,12 @@
 import { React, useState } from 'react';
 import './App.scss';
 import Todo from './components/Todo/Todo';
+import TodoManager from './services/TodoManager';
 
 const getInitialState = {
-	todo: [],
+	todo: TodoManager.getInitialTodo,
 	inputValue: '',
+	editTodo: null,
 };
 
 const App = (context) => {
