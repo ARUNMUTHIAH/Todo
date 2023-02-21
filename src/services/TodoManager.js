@@ -52,6 +52,12 @@ const toggleIsActive = (context) => {
 	});
 };
 
+const selectAll = (context) => {
+	const { state: { todo }, checked } = context;
+
+	return todo.map((data) =>
+		({ ...data, isActive: checked }));
+};
 const TodoManager = {
 	getInitialTodo,
 	addId,
@@ -59,6 +65,7 @@ const TodoManager = {
 	addButtonAction,
 	update,
 	toggleIsActive,
+	selectAll,
 };
 
 export default TodoManager;
