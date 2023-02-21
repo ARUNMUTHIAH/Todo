@@ -58,6 +58,7 @@ const selectAll = (context) => {
 	return todo.map((data) =>
 		({ ...data, isActive: checked }));
 };
+
 const TodoManager = {
 	getInitialTodo,
 	addId,

@@ -7,7 +7,7 @@ import Update from '../Button/Update';
 import Display from '../Display/Display';
 import Input from '../TextBox/Input';
 
-const Button = (context) => {
+const ActionButton = (context) => {
 	const { state: { editTodo }} = context;
 
 	return editTodo ? <Update { ...context }/> : 	<Add { ...context }/>;
@@ -15,7 +15,7 @@ const Button = (context) => {
 
 const Todo = (context) =>
 	<Box>
-		<Button { ...context }/>
+		<ActionButton { ...context }/>
 		<Input { ...context }/>
 		<SelectAll { ...context }/>
 		<Display { ...context }/>
