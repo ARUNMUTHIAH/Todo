@@ -1,4 +1,3 @@
-import { peek } from '@laufire/utils/debug';
 import { Box } from '@mui/material';
 import React from 'react';
 import TodoManager from '../../services/TodoManager';
@@ -10,7 +9,6 @@ const Display = (context) => {
 	const { state: { filter }} = context;
 	const filtered = TodoManager.tabsFilter[filter](context);
 
-	peek(filtered);
 	return (
 		filtered.map((todo, key) =>
 			<Box key={ key } class="container">
