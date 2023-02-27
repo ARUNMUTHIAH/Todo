@@ -9,7 +9,7 @@ const Task = (context) => {
 
 	return (
 		tasks.map((task, key) =>
-			<Box key={ key }>
+			<Box key={ key } class="task">
 				<TaskName { ...{ ...context, data: task } }/>
 				<Add { ...{ ...context, data: task } }/>
 				<Delete { ...{ ...context, data: task } }/>

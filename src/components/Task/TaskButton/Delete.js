@@ -7,6 +7,7 @@ const Delete = (context) => {
 
 	return (
 		<Button
+			className="taskDelete"
 			{ ...{
 				variant: 'contained',
 				color: 'error',
