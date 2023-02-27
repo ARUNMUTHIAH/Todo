@@ -1,13 +1,13 @@
-/* eslint-disable no-magic-numbers */
 import { React, useState } from 'react';
 import './App.scss';
 import Todo from './components/Todo/Todo';
 import TodoManager from './services/TodoManager';
 
 const getInitialState = {
-	todo: TodoManager.getInitialTodo,
+	todos: TodoManager.getInitialTodo,
 	inputValue: '',
 	editTodo: null,
+	filter: 'all',
 };
 
 const App = (context) => {

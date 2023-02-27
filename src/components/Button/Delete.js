@@ -16,7 +16,7 @@ const Delete = (context) => {
 				} }
 				onClick={ () => setState((state) => ({
 					...state,
-					todo: TodoManager.removeTodo(context),
+					todos: TodoManager.removeTodo(context),
 				})) }
 			>
 				<DeleteForeverIcon/> </Button>

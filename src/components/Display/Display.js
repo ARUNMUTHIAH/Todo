@@ -1,19 +1,22 @@
-/* eslint-disable max-lines-per-function */
+import { peek } from '@laufire/utils/debug';
 import { Box } from '@mui/material';
 import React from 'react';
+import TodoManager from '../../services/TodoManager';
 import Delete from '../Button/Delete';
 import CheckBoxes from './CheckBox';
 import Text from './Text';
 
 const Display = (context) => {
-	const { state: { todo }} = context;
+	const { state: { filter }} = context;
+	const filtered = TodoManager.tabsFilter[filter](context);
 
+	peek(filtered);
 	return (
-		todo.map((object, key) =>
+		filtered.map((todo, key) =>
 			<Box key={ key } class="container">
-				<CheckBoxes { ...{ ...context, data: object } }/>
-				<Text { ...{ ...context, data: object } }/>
-				<Delete { ...{ ...context, data: object } }/>
+				<CheckBoxes { ...{ ...context, data: todo } }/>
+				<Text { ...{ ...context, data: todo } }/>
+				<Delete { ...{ ...context, data: todo } }/>
 			</Box>));
 };
 

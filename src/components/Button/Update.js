@@ -9,10 +9,10 @@ const Update = (context) => {
 		<Button
 			variant="outlined"
 			size="large"
-			color="secondary"
+			color="primary"
 			onClick={ () => setState((state) => ({
 				...state,
-				todo: TodoManager.update(context),
+				todos: TodoManager.update(context),
 				editTodo: false,
 				inputValue: '',
 			})) }

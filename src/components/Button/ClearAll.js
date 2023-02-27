@@ -1,11 +1,12 @@
 import { Box, Button } from '@mui/material';
 import React from 'react';
+import TodoManager from '../../services/TodoManager';
 
 const ClearAll = (context) => {
-	const { setState, state, state: { todo }} = context;
+	const { setState, state, state: { todos }} = context;
 
 	return (
-		todo.length
+		todos.length
 			&& <Box>
 				<Button
 					{ ...{
@@ -15,8 +16,7 @@ const ClearAll = (context) => {
 					} }
 					onClick={ () => setState({
 						...state,
-						todo: todo.filter((data) =>
-							data.isActive !== true),
+						todos: TodoManager.clearAllFilter(context),
 					}) }
 				>Clear All</Button>
 			</Box>);

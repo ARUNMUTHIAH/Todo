@@ -2,17 +2,17 @@ import { Box } from '@mui/material';
 import React from 'react';
 
 const Text = (context) => {
-	const { setState, data: object } = context;
+	const { setState, data: todo } = context;
 
 	return (
 		<Box
 			class="display"
 			onClick={ () => setState((state) => ({
 				...state,
-				inputValue: object.value,
-				editTodo: object,
+				inputValue: todo.value,
+				editTodo: todo,
 			})) }
-		>{object.value}
+		>{todo.value}
 		</Box>);
 };
 

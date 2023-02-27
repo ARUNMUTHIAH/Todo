@@ -4,17 +4,17 @@ import React from 'react';
 import TodoManager from '../../services/TodoManager';
 
 const Add = (context) => {
-	const { setState, state: { todo }} = context;
+	const { setState, state: { todos }} = context;
 
 	return (
 		<Button
 			variant="outlined"
 			size="large"
-			color="secondary"
+			color="primary"
 			disabled={ TodoManager.addButtonAction(context) }
 			onClick={ () => setState((state) => ({
 				...state,
-				todo: [...todo, TodoManager.addId(context)],
+				todos: [...todos, TodoManager.addId(context)],
 				inputValue: '',
 			})) }
 		>ADD</Button>);

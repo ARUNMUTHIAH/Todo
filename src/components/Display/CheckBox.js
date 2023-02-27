@@ -3,16 +3,16 @@ import React from 'react';
 import TodoManager from '../../services/TodoManager';
 
 const CheckBoxes = (context) => {
-	const { setState, state, data: object } = context;
-	const { isActive } = object;
+	const { setState, state, data: todo } = context;
+	const { isActive } = todo;
 
 	return (
 		<Checkbox
 			checked={ isActive }
 			onClick={ () => setState({
 				...state,
-				todo: TodoManager.toggleIsActive({ ...{ ...context,
-					data: object }}),
+				todos: TodoManager.toggleIsActive({ ...{ ...context,
+					data: todo }}),
 			}) }
 		/>
 	);
