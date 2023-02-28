@@ -1,26 +1,23 @@
-import { Box, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import React from 'react';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TodoManager from '../../services/TodoManager';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Delete = (context) => {
 	const { setState } = context;
 
 	return (
-		<Box>
-			<Button
-				{ ...{
-					variant: 'contained',
-					color: 'error',
-					size: 'small',
-					onClick: () => setState((state) => ({
-						...state,
-						todos: TodoManager.removeTodo(context),
-					})),
-				} }
-			>
-				<DeleteForeverIcon/> </Button>
-		</Box>);
+		<Button
+			{ ...{
+				variant: 'outlined',
+				startIcon: <DeleteIcon/>,
+				size: 'large',
+				onClick: () => setState((state) => ({
+					...state,
+					todos: TodoManager.removeTodo(context),
+				})),
+			} }
+		>DELETE</Button>);
 };
 
 export default Delete;

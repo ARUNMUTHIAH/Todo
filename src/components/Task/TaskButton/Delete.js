@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import TaskManager from '../../../services/TaskManager';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Delete = (context) => {
 	const { setState } = context;
@@ -11,13 +12,14 @@ const Delete = (context) => {
 				className: 'taskDelete',
 				variant: 'contained',
 				color: 'error',
-				size: 'small',
+				size: 'large',
+				startIcon: <DeleteIcon/>,
 				onClick: () => setState((state) => ({
 					...state,
 					tasks: TaskManager.removeTodo(context),
 				})),
 			} }
-		> - </Button>);
+		> DELETE </Button>);
 };
 
 export default Delete;
