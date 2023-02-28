@@ -13,11 +13,11 @@ const Delete = (context) => {
 					variant: 'contained',
 					color: 'error',
 					size: 'small',
+					onClick: () => setState((state) => ({
+						...state,
+						todos: TodoManager.removeTodo(context),
+					})),
 				} }
-				onClick={ () => setState((state) => ({
-					...state,
-					todos: TodoManager.removeTodo(context),
-				})) }
 			>
 				<DeleteForeverIcon/> </Button>
 		</Box>);

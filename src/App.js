@@ -4,6 +4,7 @@ import TaskManager from './services/TaskManager';
 import TodoManager from './services/TodoManager';
 import Todos from './components/Todo/Todos';
 import Tasks from './components/Task/Tasks';
+import { Box } from '@mui/material';
 
 const getInitialState = {
 	todos: TodoManager.getInitialTodo,
@@ -20,11 +21,11 @@ const App = (context) => {
 
 	once(() => TaskManager.taskGenerator(extendedContext));
 
-	return <div className="App">
+	return <Box className="App">
 		<Todos { ...extendedContext }/>
 		<label className="task">TASK LIST</label>
 		<Tasks { ...extendedContext }/>
-	</div>;
+	</Box>;
 };
 
 export default App;

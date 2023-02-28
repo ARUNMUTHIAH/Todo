@@ -9,7 +9,7 @@ const ClearAll = (context) => {
 		<Box>
 			<Button
 				{ ...{
-					variant: 'contained',
+					variant: 'outlined',
 					color: 'primary',
 					size: 'large',
 					onClick: () => setState({

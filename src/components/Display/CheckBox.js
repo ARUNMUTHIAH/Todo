@@ -7,13 +7,12 @@ const CheckBoxes = (context) => {
 	const { isActive } = todo;
 
 	return (
-		<Checkbox
-			checked={ isActive }
-			onClick={ () => setState({
+		<Checkbox { ...{ checked: isActive,
+			onClick: () => setState({
 				...state,
 				todos: TodoManager.isChecked({ ...{ ...context,
 					data: todo }}),
-			}) }
+			}) } }
 		/>
 	);
 };

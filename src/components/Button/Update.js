@@ -6,16 +6,15 @@ const Update = (context) => {
 	const { setState } = context;
 
 	return (
-		<Button
-			variant="outlined"
-			size="large"
-			color="primary"
-			onClick={ () => setState((state) => ({
+		<Button { ...{ variant: 'outlined',
+			size: 'large',
+			color: 'primary',
+			onClick: () => setState((state) => ({
 				...state,
 				todos: TodoManager.updateTodos(context),
 				editTodo: false,
 				inputValue: '',
-			})) }
+			})) } }
 		>Update</Button>);
 };
 

@@ -6,6 +6,7 @@ const addTask = (context) => {
 	return {
 		value: taskList,
 		id: rndString(idLength),
+		isActive: false,
 	};
 };
 

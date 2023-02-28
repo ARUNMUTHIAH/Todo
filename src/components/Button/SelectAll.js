@@ -7,12 +7,11 @@ const SelectAll = (context) => {
 
 	return (
 		<Box>
-			<Checkbox
-				checked={ TodoManager.isAllChecked(context) }
-				onClick={ ({ target: { checked }}) => setState({
+			<Checkbox { ...{ checked: TodoManager.isAllChecked(context),
+				onClick: ({ target: { checked }}) => setState({
 					...state,
 					todos: TodoManager.selectAll({ ...context, checked }),
-				}) }
+				}) } }
 			/>SELECT ALL
 		</Box>);
 };

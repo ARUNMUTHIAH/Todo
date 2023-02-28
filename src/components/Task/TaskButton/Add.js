@@ -8,16 +8,14 @@ const Add = (context) => {
 
 	return (
 		<Button
-			{ ...{
-				variant: 'contained',
+			{ ...{ variant: 'contained',
 				color: 'error',
 				size: 'small',
-			} }
-			onClick={ () => setState({
-				...state,
-				todos: [...todos, task],
-				tasks: TaskManager.removeTask(context),
-			}) }
+				onClick: () => setState({
+					...state,
+					todos: [...todos, task],
+					tasks: TaskManager.removeTask(context),
+				}) } }
 		>+</Button>);
 };
 

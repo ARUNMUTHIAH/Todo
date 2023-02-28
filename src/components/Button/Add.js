@@ -6,16 +6,15 @@ const Add = (context) => {
 	const { setState, state: { todos }} = context;
 
 	return (
-		<Button
-			variant="outlined"
-			size="large"
-			color="primary"
-			disabled={ TodoManager.isEmpty(context) }
-			onClick={ () => setState((state) => ({
+		<Button { ...{ variant: 'outlined',
+			size: 'large',
+			color: 'primary',
+			disabled: TodoManager.isEmpty(context),
+			onClick: () => setState((state) => ({
 				...state,
 				todos: [...todos, TodoManager.addTodo(context)],
 				inputValue: '',
-			})) }
+			})) } }
 		>ADD</Button>);
 };
 

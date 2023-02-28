@@ -7,16 +7,16 @@ const Delete = (context) => {
 
 	return (
 		<Button
-			className="taskDelete"
 			{ ...{
+				className: 'taskDelete',
 				variant: 'contained',
 				color: 'error',
 				size: 'small',
+				onClick: () => setState((state) => ({
+					...state,
+					tasks: TaskManager.removeTodo(context),
+				})),
 			} }
-			onClick={ () => setState((state) => ({
-				...state,
-				tasks: TaskManager.removeTodo(context),
-			})) }
 		> - </Button>);
 };
 
