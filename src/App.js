@@ -19,6 +19,7 @@ const App = (context) => {
 
 	return <div className="App">
 		<Todo { ...extendedContext }/>
+		<label className="task">TASK LIST</label>
 		<Task { ...extendedContext }/>
 	</div>;
 };
