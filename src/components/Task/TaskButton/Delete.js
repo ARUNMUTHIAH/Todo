@@ -15,7 +15,7 @@ const Delete = (context) => {
 			} }
 			onClick={ () => setState((state) => ({
 				...state,
-				tasks: TaskManager.removeData(context),
+				tasks: TaskManager.removeTodo(context),
 			})) }
 		> - </Button>);
 };

@@ -1,6 +1,8 @@
 const config = {
 	idLength: 5,
-	taskList: ['task1', 'task2', 'task3'],
+	taskList: ['Task1', 'Task2', 'Task3', 'Task4'],
+	timeInterval: 1000,
+	maxLength: 5,
 };
 
 export default config;

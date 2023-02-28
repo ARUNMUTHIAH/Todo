@@ -1,6 +1,6 @@
+import React from 'react';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { Box, Tab } from '@mui/material';
-import React from 'react';
 import Display from '../Display/Display';
 
 const Tabs = (context) => {

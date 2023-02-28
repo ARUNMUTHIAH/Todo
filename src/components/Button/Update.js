@@ -12,7 +12,7 @@ const Update = (context) => {
 			color="primary"
 			onClick={ () => setState((state) => ({
 				...state,
-				todos: TodoManager.update(context),
+				todos: TodoManager.updateTodos(context),
 				editTodo: false,
 				inputValue: '',
 			})) }

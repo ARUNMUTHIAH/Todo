@@ -1,6 +1,5 @@
-/* eslint-disable no-magic-numbers */
-import { Button } from '@mui/material';
 import React from 'react';
+import { Button } from '@mui/material';
 import TodoManager from '../../services/TodoManager';
 
 const Add = (context) => {
@@ -11,10 +10,10 @@ const Add = (context) => {
 			variant="outlined"
 			size="large"
 			color="primary"
-			disabled={ TodoManager.addButtonAction(context) }
+			disabled={ TodoManager.isEmpty(context) }
 			onClick={ () => setState((state) => ({
 				...state,
-				todos: [...todos, TodoManager.addId(context)],
+				todos: [...todos, TodoManager.addTodo(context)],
 				inputValue: '',
 			})) }
 		>ADD</Button>);

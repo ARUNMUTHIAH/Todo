@@ -7,10 +7,10 @@ import Text from './Text';
 
 const Display = (context) => {
 	const { state: { filter }} = context;
-	const filtered = TodoManager.tabsFilter[filter](context);
+	const filteredTodos = TodoManager.filteredTodos[filter](context);
 
 	return (
-		filtered.map((todo, key) =>
+		filteredTodos.map((todo, key) =>
 			<Box key={ key } class="container">
 				<CheckBoxes { ...{ ...context, data: todo } }/>
 				<Text { ...{ ...context, data: todo } }/>

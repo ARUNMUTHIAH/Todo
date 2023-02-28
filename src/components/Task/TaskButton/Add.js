@@ -16,7 +16,7 @@ const Add = (context) => {
 			onClick={ () => setState({
 				...state,
 				todos: [...todos, task],
-				tasks: TaskManager.removeData(context),
+				tasks: TaskManager.removeTask(context),
 			}) }
 		>+</Button>);
 };

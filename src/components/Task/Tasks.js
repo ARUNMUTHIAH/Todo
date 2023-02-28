@@ -4,7 +4,7 @@ import TaskName from './TaskName';
 import Add from './TaskButton/Add';
 import Delete from './TaskButton/Delete';
 
-const Task = (context) => {
+const Tasks = (context) => {
 	const { state: { tasks }} = context;
 
 	return (
@@ -16,4 +16,4 @@ const Task = (context) => {
 			</Box>));
 };
 
-export default Task;
+export default Tasks;

@@ -6,7 +6,7 @@ import Input from '../TextBox/Input';
 import Tabs from '../Tabs/Tabs';
 import ActionButton from '../Button/ActionButton';
 
-const Todo = (context) =>
+const Todos = (context) =>
 	<Box>
 		<ActionButton { ...context }/>
 		<Input { ...context }/>
@@ -15,4 +15,4 @@ const Todo = (context) =>
 		<ClearAll { ...context }/>
 	</Box>;
 
-export default Todo;
+export default Todos;

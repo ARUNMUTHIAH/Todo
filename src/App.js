@@ -1,26 +1,29 @@
 import { React, useState } from 'react';
 import './App.scss';
-import Todo from './components/Todo/Todo';
 import TaskManager from './services/TaskManager';
 import TodoManager from './services/TodoManager';
-import Task from './components/Task/Task';
+import Todos from './components/Todo/Todos';
+import Tasks from './components/Task/Tasks';
 
-const getInitialState = (context) => ({
+const getInitialState = {
 	todos: TodoManager.getInitialTodo,
 	inputValue: '',
 	editTodo: null,
 	filter: 'all',
-	tasks: TaskManager.taskId(context),
-});
+	tasks: [],
+};
 
 const App = (context) => {
-	const [state, setState] = useState(getInitialState(context));
+	const [state, setState] = useState(getInitialState);
+	const { once } = context;
 	const extendedContext = { ...context, state, setState };
 
+	once(() => TaskManager.taskGenerator(extendedContext));
+
 	return <div className="App">
-		<Todo { ...extendedContext }/>
+		<Todos { ...extendedContext }/>
 		<label className="task">TASK LIST</label>
-		<Task { ...extendedContext }/>
+		<Tasks { ...extendedContext }/>
 	</div>;
 };
 

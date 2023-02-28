@@ -11,7 +11,7 @@ const CheckBoxes = (context) => {
 			checked={ isActive }
 			onClick={ () => setState({
 				...state,
-				todos: TodoManager.toggleIsActive({ ...{ ...context,
+				todos: TodoManager.isChecked({ ...{ ...context,
 					data: todo }}),
 			}) }
 		/>

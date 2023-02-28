@@ -2,18 +2,18 @@ import { rndString } from '@laufire/utils/random';
 
 const getInitialTodo = [
 	{
-		value: 'test1',
+		value: 'Test1',
 		id: 'aaaaa',
 		isActive: false,
 	},
 	{
-		value: 'test2',
+		value: 'Test2',
 		id: 'bbbbb',
 		isActive: false,
 	},
 ];
 
-const addId = (context) => {
+const addTodo = (context) => {
 	const { state: { inputValue }} = context;
 	const { config: { idLength }} = context;
 
@@ -30,9 +30,9 @@ const removeTodo = (context) => {
 	return todos.filter((todo) => todo.id !== id);
 };
 
-const addButtonAction = ({ state: { inputValue }}) => inputValue === '';
+const isEmpty = ({ state: { inputValue }}) => inputValue === '';
 
-const update = (context) => {
+const updateTodos = (context) => {
 	const { state: { todos, editTodo, inputValue }} = context;
 
 	return todos.map((todo) => (todo.id === editTodo.id
@@ -40,7 +40,7 @@ const update = (context) => {
 		: todo));
 };
 
-const toggleIsActive = (context) => {
+const isChecked = (context) => {
 	const { state: { todos }, data: todo } = context;
 
 	return todos.map((data) => {
@@ -59,14 +59,14 @@ const selectAll = (context) => {
 		({ ...data, isActive: checked }));
 };
 
-const isChecked = (context) => {
+const isAllChecked = (context) => {
 	const { state } = context;
 	const { todos } = state;
 
 	return todos.length && todos.every((data) => data.isActive);
 };
 
-const clearAllFilter = (context) => {
+const clearCompletedTodos = (context) => {
 	const { state } = context;
 	const { todos } = state;
 
@@ -74,7 +74,7 @@ const clearAllFilter = (context) => {
 		data.isActive !== true);
 };
 
-const tabsFilter = {
+const filteredTodos = {
 	all: ({ state: { todos }}) => todos,
 	active: ({ state: { todos }}) => todos.filter((todo) => !todo.isActive),
 	completed: ({ state: { todos }}) => todos.filter((todo) => todo.isActive),
@@ -82,15 +82,15 @@ const tabsFilter = {
 
 const TodoManager = {
 	getInitialTodo,
-	addId,
+	addTodo,
 	removeTodo,
-	addButtonAction,
-	update,
-	toggleIsActive,
-	selectAll,
+	isEmpty,
+	updateTodos,
 	isChecked,
-	clearAllFilter,
-	tabsFilter,
+	selectAll,
+	isAllChecked,
+	clearCompletedTodos,
+	filteredTodos,
 };
 
 export default TodoManager;
