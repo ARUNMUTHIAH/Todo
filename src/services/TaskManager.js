@@ -17,7 +17,7 @@ const removeTask = (context) => {
 };
 
 const taskGenerator = (context) => {
-	const { setState, config: { taskList, timeInterval, maxLength }} = context;
+	const { setState, config: { taskList, delayTime, maxLength }} = context;
 
 	return setInterval(() => setState((newState) => ({
 		...newState,
@@ -25,7 +25,7 @@ const taskGenerator = (context) => {
 			? [...newState.tasks,
 				addTask({ ...context, data: rndValues(taskList) })]
 			: newState.tasks,
-	})), timeInterval);
+	})), delayTime);
 };
 
 const TaskManager = {

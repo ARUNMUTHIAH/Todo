@@ -1,7 +1,7 @@
 const config = {
 	idLength: 5,
 	taskList: ['Task1', 'Task2', 'Task3', 'Task4'],
-	timeInterval: 1000,
+	delayTime: 1000,
 	maxLength: 5,
 };
 

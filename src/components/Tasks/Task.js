@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import Delete from '../Button/Delete';
 import Add from './TaskButton/Add';
+import Delete from './TaskButton/Delete';
 import TaskName from './TaskName';
 
 const Task = (context) => {
