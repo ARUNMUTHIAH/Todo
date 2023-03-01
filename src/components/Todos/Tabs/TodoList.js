@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { Box, Tab } from '@mui/material';
-import Display from './Display/Display';
+import Display from '../Display/Display';
 
 const TodoList = (context) => {
 	const { setState, state } = context;
