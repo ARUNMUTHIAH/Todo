@@ -2,9 +2,9 @@ import { React, useState } from 'react';
 import './App.scss';
 import TaskManager from './services/TaskManager';
 import TodoManager from './services/TodoManager';
-import Todos from './components/Todo/Todos';
 import Tasks from './components/Tasks/Index';
 import { Box } from '@mui/material';
+import Todos from './components/Todos/Index';
 
 const getInitialState = {
 	todos: TodoManager.getInitialTodo,
