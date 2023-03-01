@@ -1,6 +1,6 @@
 import React from 'react';
-import AddTodo from './Add';
-import UpdateTodo from './Update';
+import AddTodo from './AddTodo';
+import UpdateTodo from './UpdateTodo';
 
 const ActionButton = (context) => {
 	const { state: { editTodo }} = context;
