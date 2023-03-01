@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 import TodoManager from '../../services/TodoManager';
 
-const Update = (context) => {
+const UpdateTodo = (context) => {
 	const { setState } = context;
 
 	return (
@@ -18,4 +18,4 @@ const Update = (context) => {
 		>Update</Button>);
 };
 
-export default Update;
+export default UpdateTodo;

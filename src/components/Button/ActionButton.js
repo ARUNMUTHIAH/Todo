@@ -1,14 +1,14 @@
 import React from 'react';
-import Add from './Add';
-import Update from './Update';
+import AddTodo from './Add';
+import UpdateTodo from './Update';
 
 const ActionButton = (context) => {
 	const { state: { editTodo }} = context;
 
 	return (
 		editTodo
-			? <Update { ...context }/>
-			: 	<Add { ...context }/>
+			? <UpdateTodo { ...context }/>
+			: <AddTodo { ...context }/>
 	);
 };
 
