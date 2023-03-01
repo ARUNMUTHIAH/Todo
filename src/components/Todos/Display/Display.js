@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import TodoManager from '../../../services/TodoManager';
-import Delete from '../Button/Delete';
+import Delete from '../Buttons/Delete';
 import CheckBoxes from './CheckBox';
 import Text from './Text';
 
