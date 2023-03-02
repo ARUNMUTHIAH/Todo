@@ -3,7 +3,7 @@
 	text-align: center;
 	height: 100vh;
 }
-.display {
+.taskName {
 	font-size: x-large;
 }
 .container {
@@ -19,7 +19,7 @@
 	width: 50vw;
 }
 .tasks {
-	background-color: rgba(216, 112, 147, 0.548);
+	margin-top: 10%;
 	width: 50vw;
 	font-size: x-large;
 }
@@ -29,4 +29,12 @@
 .todoBody {
 	margin-left: 30%;
 	margin-top: 5%;
+}
+.task {
+	background-color: rgba(216, 112, 147, 0.548);
+}
+.taskList {
+	position: relative;
+	top: 7%;
+	font-size: xx-large;
 }

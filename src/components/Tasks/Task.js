@@ -5,13 +5,17 @@ import DeleteTask from './TaskButton/DeleteTask';
 import TaskName from './TaskName';
 
 const Task = (context) => {
-	const { data: task } = context;
+	const { state: { tasks }} = context;
 
-	return <Box class="task">
-		<TaskName { ...{ ...context, data: task } }/>
-		<AddTask { ...{ ...context, data: task } }/>
-		<DeleteTask { ...{ ...context, data: task } }/>
-	</Box>;
+	return (
+		<Box class="tasks">
+			{tasks.map((task, key) =>
+				<Box key={ key }>
+					<TaskName { ...{ ...context, data: task } }/>
+					<AddTask { ...{ ...context, data: task } }/>
+					<DeleteTask { ...{ ...context, data: task } }/>
+				</Box>)}
+		</Box>);
 };
 
 export default Task;
