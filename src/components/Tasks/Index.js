@@ -5,7 +5,7 @@ import Task from './Task';
 const Tasks = (context) => {
 	const { state: { tasks }} = context;
 
-	return <Box>
+	return <Box className="tasks">
 		<label className="task">TASK LIST</label>
 		{tasks.map((task, key) =>
 			<Task key={ key } { ...{ ...context, data: task } }/>)}

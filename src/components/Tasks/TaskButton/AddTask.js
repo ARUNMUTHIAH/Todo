@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import TaskManager from '../../../services/TaskManager';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-const Add = (context) => {
+const AddTask = (context) => {
 	const { state: { todos }, state, setState } = context;
 	const { data: task } = context;
 
@@ -21,8 +21,4 @@ const Add = (context) => {
 		>ADD</Button>);
 };
 
-export default Add;
-
-// <IconButton color:"primary" aria-label:"add to shopping cart">
-//   <AddShoppingCartIcon />
-// </IconButton>
+export default AddTask;

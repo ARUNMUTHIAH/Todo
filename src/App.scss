@@ -1,8 +1,7 @@
 .App {
+	display: flex;
 	text-align: center;
-	position:absolute;
-	top : 5%;
-	left: 45%;
+	height: 100vh;
 }
 .display {
 	font-size: x-large;
@@ -12,12 +11,22 @@
 	display: flex;
 	width : 100%;
 }
-.task {
-	position: relative;
-	left: 450px;
-	top : -230px;
-	font-size: xx-large;
-}
 .taskDelete {
 	left: 10px;
+}
+.todos {
+	background-color: wheat;
+	width: 50vw;
+}
+.tasks {
+	background-color: rgba(216, 112, 147, 0.548);
+	width: 50vw;
+	font-size: x-large;
+}
+.todoHeader {
+	margin-top: 5%;
+}
+.todoBody {
+	margin-left: 30%;
+	margin-top: 5%;
 }

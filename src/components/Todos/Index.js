@@ -1,18 +1,14 @@
-import { Box } from '@mui/material';
 import React from 'react';
-import TodoInput from './TextBox/TodoInput';
-import ActionButton from './Buttons/ActionButton';
-import ClearCompletedTodos from './Buttons/ClearCompletedTodos';
-import SelectAllTodos from './Buttons/SelectAllTodos';
-import TodoList from './Tabs/TodoList';
+import { Box } from '@mui/material';
+import TodoHeader from './TodoHeader';
+import TodoBody from './TodoBody';
+import TodoFooter from './TodoFooter';
 
 const Todos = (context) =>
-	<Box>
-		<ActionButton { ...context }/>
-		<TodoInput { ...context }/>
-		<TodoList { ...context }/>
-		<SelectAllTodos { ...context }/>
-		<ClearCompletedTodos { ...context }/>
+	<Box className="todos">
+		<TodoHeader { ...context }/>
+		<TodoBody { ...context }/>
+		<TodoFooter { ...context }/>
 	</Box>;
 
 export default Todos;

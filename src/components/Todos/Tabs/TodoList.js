@@ -7,7 +7,7 @@ const TodoList = (context) => {
 	const { setState, state } = context;
 	const { filter } = state;
 
-	return 	<Box>
+	return 	<Box className="todoList">
 		<TabContext value={ filter }>
 			<TabList { ...{ onChange: (event, value) => setState({
 				...state,

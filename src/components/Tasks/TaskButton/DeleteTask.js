@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import TaskManager from '../../../services/TaskManager';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Delete = (context) => {
+const DeleteTask = (context) => {
 	const { setState } = context;
 
 	return (
@@ -22,4 +22,4 @@ const Delete = (context) => {
 		> DELETE </Button>);
 };
 
-export default Delete;
+export default DeleteTask;

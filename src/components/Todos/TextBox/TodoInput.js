@@ -5,7 +5,8 @@ const TodoInput = (context) => {
 	const { setState, state } = context;
 
 	return (
-		<TextField { ...{ placeholder: 'To do',
+		<TextField { ...{ class: 'todoInput',
+			placeholder: 'To do',
 			value: state.inputValue,
 			onChange: ({ target: { value }}) => setState({
 				...state,
